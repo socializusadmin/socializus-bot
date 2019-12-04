@@ -20,7 +20,7 @@
  */
 
 'use strict';
-const PAGE_ACCESS_TOKEN = "EAAOXmdcrZBCUBAEYjXMoaZB01kEnF5puWHeZBvIaxoOsSmyKDtmZBQgn2tyXbpFK9G1EzJE4h484NPFtCLoPqzDSliP18u2WEeV0y5Up3NnmPdWBZALjuWk413v3JEZBKTDx9abSYFjdvsZCuBCGkFD7KhJqlmBBIX7Dcmts4LReQZDZD";
+const PAGE_ACCESS_TOKEN = "EAAOXmdcrZBCUBALPVPcUwh8gBbRHeImlTdqLewPe5RaRq1IATILOjK3NVTLjvUydFOl6XfmthPr2uhdbpP3fqvvaEwY03XpG974HqJP7uLJiCz1RpszZAAyNmPKIv0OfYIHkuQB9heH91HfaDfkS4U7Oxho73360n055hInQZDZD";
 // Imports dependencies and set up http server
 const 
   request = require('request'),
