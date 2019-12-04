@@ -270,15 +270,11 @@ function handlePostback(sender_psid, received_postback) {
 				"title": "Share and invite your friend below",
 				"subtitle": "",
 				"image_url": "https://www.drupal.org/files/project-images/drupal-addtoany-share-buttons_1.png",
-				"default_action": {
-				  "type": "web_url",
-				  "url": "https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=https%3A%2F%2Fwww.facebook.com%2Fsocializus.org%2F&display=popup&ref=plugin&src=share_button"
-				},
 				"buttons": [
 				  {
 					"type": "web_url",
 					"url": "https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=https%3A%2F%2Fwww.facebook.com%2Fsocializus.org%2F&display=popup&ref=plugin&src=share_button", 
-					"title": "Share"
+					"title": "Share on Facebook"
 				  }
 				]
 			  }
