@@ -190,7 +190,7 @@ function handlePostback(sender_psid, received_postback) {
 
   // Set the response based on the postback payload
   if (payload === 'yes') {
-    response = { "text": "Ok good choice and trust me it won't be long..All you have to do is to post a review on the pubsurfing page on TripAdvisor. Once your review posted on TripAdvisor make sure to send me back as an attachment a proof by taking a screenshot of your rewiew posted. So now i'am waiting for you to send me the screenshot and if its ok after this i will ask you to send me your email to know where to send the invitation. Good luck i'll back soon ;)" }
+    response = { "text": "Ok good choice and trust me it won't be long..All you have to do is to post a review on the pubsurfing page on TripAdvisor. Once your review posted on TripAdvisor make sure to send me back as an attachment a proof by taking a screenshot of your rewiew posted. So now i'am waiting for you to send me the screenshot and if its ok after this i will ask you to send me your email to know where to send the invitation. Good luck i'll be back soon ;)" }
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
   } else if (payload === 'yes2') {
