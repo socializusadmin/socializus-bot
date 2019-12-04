@@ -20,9 +20,7 @@
  */
 
 'use strict';
-const PAGE_ACCESS_TOKEN = "EAAOXmdcrZBCUBALxoonM9aKwPwi4xwNv38kJZA7iOZBQA4tAUV6u47EYPzZBQKH4OEwNC6sxua4UxVsNtcZBUKhSTkJcZBfETLbpt0rNaFZATxSZA6GPQjLHIgBL3rUwDxjZB5mH0cGdCR0o8DygHg4RiYO1arxyheZBxfTUyQfsDzTwZDZD";
-// Imports dependencies and set up http server
-
+const PAGE_ACCESS_TOKEN = "EAAOXmdcrZBCUBAEYjXMoaZB01kEnF5puWHeZBvIaxoOsSmyKDtmZBQgn2tyXbpFK9G1EzJE4h484NPFtCLoPqzDSliP18u2WEeV0y5Up3NnmPdWBZALjuWk413v3JEZBKTDx9abSYFjdvsZCuBCGkFD7KhJqlmBBIX7Dcmts4LReQZDZD";
 // Imports dependencies and set up http server
 const 
   request = require('request'),
@@ -37,7 +35,6 @@ app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 app.post('/webhook', (req, res) => {  
 
   // Parse the request body from the POST
-  console.log(req)
   let body = req.body;
 
   // Check the webhook event is from a Page subscription
@@ -48,6 +45,7 @@ app.post('/webhook', (req, res) => {
       // Gets the body of the webhook event
       let webhook_event = entry.messaging[0];
       console.log(webhook_event);
+
 
       // Get the sender PSID
       let sender_psid = webhook_event.sender.id;
@@ -72,7 +70,6 @@ app.post('/webhook', (req, res) => {
   }
 
 });
-
 
 // Accepts GET requests at the /webhook endpoint
 app.get('/webhook', (req, res) => {
@@ -102,7 +99,6 @@ app.get('/webhook', (req, res) => {
   }
 });
 
-
 function handleMessage(sender_psid, received_message) {
   let response;
   
@@ -110,33 +106,6 @@ function handleMessage(sender_psid, received_message) {
   if (received_message.text) {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
-	
-	  /*response = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "generic",
-          "elements": [{
-            "title": "Hello? Are you interested having a free pubsurfing ticket for the next trip?",
-            "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url,
-            "buttons": [
-              {
-                "type": "postback",
-                "title": "Yes!",
-                "payload": "yes",
-              },
-              {
-                "type": "postback",
-                "title": "No!",
-                "payload": "no",
-              }
-            ],
-          }]
-        }
-      }
-    }*/
-	
     response = {
       "text": `You sent the message: "${received_message.text}". Now send me an attachment!`
     }
@@ -149,19 +118,19 @@ function handleMessage(sender_psid, received_message) {
         "payload": {
           "template_type": "generic",
           "elements": [{
-            "title": "Is this the right screenshot?",
+            "title": "Is this the right picture?",
             "subtitle": "Tap a button to answer.",
             "image_url": attachment_url,
             "buttons": [
               {
                 "type": "postback",
                 "title": "Yes!",
-                "payload": "yes2",
+                "payload": "yes",
               },
               {
                 "type": "postback",
                 "title": "No!",
-                "payload": "no2",
+                "payload": "no",
               }
             ],
           }]
@@ -182,19 +151,8 @@ function handlePostback(sender_psid, received_postback) {
 
   // Set the response based on the postback payload
   if (payload === 'yes') {
-    response = { "text": "Ok good choice and trust me it won't be longue..\
-	All you have to do is to post a review on the pubsurfing page on TripAdvisor.\
-	Once your review posted on TripAdvisor make sure to send me back as an attachment\
-	a proof by taking a screenshot of your rewiew posted.\
-	So now i'am waiting for you to send me the screenshot and if its ok after this i will ask you\
-	to send me your email to know where to send the invitation. Good luck i'll back soon ;)" }
+    response = { "text": "Thanks!" }
   } else if (payload === 'no') {
-    response = { "text": "Oops, try sending another image." }
-  } else if (payload === 'yes2') {
-    response = { "text": "Perfect what a pleasure to collaborate with you. So now let me know your email and\
-	i will send you an invitation to the next pubsurfing. You can also talk to your friend about this opportunity.\
-	Thank you to support us ;)" }
-  } else if (payload === 'no2') {
     response = { "text": "Oops, try sending another image." }
   }
   // Send the message to acknowledge the postback
