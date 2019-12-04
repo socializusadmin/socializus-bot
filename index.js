@@ -109,49 +109,49 @@ function handleMessage(sender_psid, received_message) {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
 	
-	response ={
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements":[
-           {
-            "title":"Welcome!",
-            "image_url":"https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/s960x960/12916799_775383962597533_4700375958288038482_o.jpg?_nc_cat=102&_nc_ohc=vTISMUSqmSAAQns9NN4zaccbLgUys6BTWQcppzZlMJ50BYjOZ9AL3ypyA&_nc_ht=scontent-cdt1-1.xx&oh=13d0b980aa085cf41eac3724a8232ee2&oe=5E75EE10",
-            "subtitle":"Welcome to the Socializus welcoming page. You can find some options below to find yours answers.",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://petersfancybrownhats.com/view?item=103",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"https://www.socializus.com/",
-                "title":"View Our Website"
-              },{
-                "type":"postback",
-                "title":"Start Chatting",
-                "payload":"chatting"
-              },{
-                "type":"postback",
-                "title":"Free Ticket Plan?",
-                "payload":"free ticket"
-              },{
-                "type":"postback",
-                "title":"Downloads Apps Mobile?",
-                "payload":"downloads app"
-              },{
-                "type":"postback",
-                "title":"Share/Invite friends?",
-                "payload":"share to friends"
-              }       			  
-            ]      
-          }
-        ]
-      }
-	}
-  }
+		response ={
+		"attachment":{
+		  "type":"template",
+		  "payload":{
+			"template_type":"generic",
+			"elements":[
+			   {
+				"title":"Welcome!",
+				"image_url":"https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/s960x960/12916799_775383962597533_4700375958288038482_o.jpg?_nc_cat=102&_nc_ohc=vTISMUSqmSAAQns9NN4zaccbLgUys6BTWQcppzZlMJ50BYjOZ9AL3ypyA&_nc_ht=scontent-cdt1-1.xx&oh=13d0b980aa085cf41eac3724a8232ee2&oe=5E75EE10",
+				"subtitle":"Welcome to the Socializus welcoming page. You can find some options below to find yours answers.",
+				"default_action": {
+				  "type": "web_url",
+				  "url": "https://petersfancybrownhats.com/view?item=103",
+				  "webview_height_ratio": "tall",
+				},
+				"buttons":[
+				  {
+					"type":"web_url",
+					"url":"https://www.socializus.com/",
+					"title":"View Our Website"
+				  },{
+					"type":"postback",
+					"title":"Start Chatting",
+					"payload":"chatting"
+				  },{
+					"type":"postback",
+					"title":"Free Ticket Plan?",
+					"payload":"free ticket"
+				  }/*,{
+					"type":"postback",
+					"title":"Downloads Apps Mobile?",
+					"payload":"downloads app"
+				  },{
+					"type":"postback",
+					"title":"Share/Invite friends?",
+					"payload":"share to friends"
+				  } */      			  
+				]      
+			  }
+			]
+		  }
+		}
+	  }
   } else if (received_message.attachments) {
     // Get the URL of the message attachment
     let attachment_url = received_message.attachments[0].payload.url;
