@@ -141,7 +141,11 @@ function handleMessage(sender_psid, received_message) {
                 "type":"postback",
                 "title":"Downloads Apps Mobile?",
                 "payload":"downloads app"
-              }                         
+              },{
+                "type":"postback",
+                "title":"Share/Invite friends?",
+                "payload":"share to friends"
+              }       			  
             ]      
           }
         ]
@@ -235,7 +239,7 @@ function handlePostback(sender_psid, received_postback) {
           "elements": [{
             "title": "Have you already installed the application Socializus on your Mobile? If not don't wait anymore...its available on both platforms. So take a look below ;)",
             "subtitle": "Tap a button to answer.",
-            "image_url": "https://images.squarespace-cdn.com/content/5d227ba8bff56b0001b7c6f8/1567312055793-5VANB5VNCF64RN1LHFR7/free-ticket-imag.png?content-type=image%2Fpng",
+            "image_url": "https://www.appsessment.com/img/news/appsessment_v1_5_android_ios_app.jpg",
             "buttons": [
               {
                 "type":"web_url",
@@ -252,6 +256,38 @@ function handlePostback(sender_psid, received_postback) {
         }
       }
     }
+  }
+  else if(payload === 'share to friends')
+  {
+	 response = {
+	  "type": "element_share",
+	  "share_contents": { 
+		"attachment": {
+		  "type": "template",
+		  "payload": {
+			"template_type": "generic",
+			"elements": [
+			  {
+				"title": "Share and invite your friend below",
+				"subtitle": "",
+				"image_url": "https://www.drupal.org/files/project-images/drupal-addtoany-share-buttons_1.png",
+				"default_action": {
+				  "type": "web_url",
+				  "url": "https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=https%3A%2F%2Fwww.facebook.com%2Fsocializus.org%2F&display=popup&ref=plugin&src=share_button"
+				},
+				"buttons": [
+				  {
+					"type": "web_url",
+					"url": "https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=https%3A%2F%2Fwww.facebook.com%2Fsocializus.org%2F&display=popup&ref=plugin&src=share_button", 
+					"title": "Share"
+				  }
+				]
+			  }
+			]
+		  }
+		}
+	  }
+	}
   }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
