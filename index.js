@@ -109,33 +109,6 @@ function handleMessage(sender_psid, received_message) {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
 	
-	  /*response = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "generic",
-          "elements": [{
-            "title": "Hello? Are you interested having a free pubsurfing ticket for the next trip?",
-            "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url,
-            "buttons": [
-              {
-                "type": "postback",
-                "title": "Yes!",
-                "payload": "yes",
-              },
-              {
-                "type": "postback",
-                "title": "No!",
-                "payload": "no",
-              }
-            ],
-          }]
-        }
-      }
-    }*/
-	
-	
 	response ={
     "attachment":{
       "type":"template",
@@ -144,8 +117,9 @@ function handleMessage(sender_psid, received_message) {
         "elements":[
            {
             "title":"Welcome!",
-            "image_url":"https://petersfancybrownhats.com/company_image.png",
-            "subtitle":"We have the right hat for everyone.",
+            "image_url":"https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/s960x960/12916799_775383962597533_4700375958288038482_o.jpg?_nc_cat=102&_nc_ohc=vTISMUSqmSAAQns9NN4zaccbLgUys6BTWQcppzZlMJ50BYjOZ9AL3ypyA&_nc_ht=scontent-cdt1-1.xx&oh=13d0b980aa085cf41eac3724a8232ee2&oe=5E75EE10",
+            "subtitle":"Welcome to the Socializus welcoming page.\
+			 You can find some options below to find yours answers.",
             "default_action": {
               "type": "web_url",
               "url": "https://petersfancybrownhats.com/view?item=103",
@@ -154,23 +128,23 @@ function handleMessage(sender_psid, received_message) {
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://petersfancybrownhats.com",
-                "title":"View Website"
+                "url":"https://www.socializus.com/",
+                "title":"View Our Website"
               },{
                 "type":"postback",
                 "title":"Start Chatting",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
-              }              
+                "payload":"chatting"
+              },{
+                "type":"postback",
+                "title":"Free Ticket Plan?",
+                "payload":"free ticket"
+              }                     
             ]      
           }
         ]
       }
-	 }
 	}
-	
-    /*response = {
-      "text": `You sent the message: "${received_message.text}". Now send me an attachment!`
-    }*/
+  }
   } else if (received_message.attachments) {
     // Get the URL of the message attachment
     let attachment_url = received_message.attachments[0].payload.url;
@@ -227,6 +201,33 @@ function handlePostback(sender_psid, received_postback) {
 	Thank you to support us ;)" }
   } else if (payload === 'no2') {
     response = { "text": "Oops, try sending another image." }
+  } else if(payload === 'free ticket')
+  {
+	  response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "Hello? Are you interested having a free pubsurfing ticket for the next trip?",
+            "subtitle": "Tap a button to answer.",
+            "image_url": "https://images.squarespace-cdn.com/content/5d227ba8bff56b0001b7c6f8/1567312055793-5VANB5VNCF64RN1LHFR7/free-ticket-imag.png?content-type=image%2Fpng",
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "Yes!",
+                "payload": "yes",
+              },
+              {
+                "type": "postback",
+                "title": "No!",
+                "payload": "no",
+              }
+            ],
+          }]
+        }
+      }
+    }
   }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
