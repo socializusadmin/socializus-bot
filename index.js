@@ -137,7 +137,11 @@ function handleMessage(sender_psid, received_message) {
                 "type":"postback",
                 "title":"Free Ticket Plan?",
                 "payload":"free ticket"
-              }                     
+              },{
+                "type":"postback",
+                "title":"Downloads Apps Mobile?",
+                "payload":"downloads app"
+              }                         
             ]      
           }
         ]
@@ -214,6 +218,34 @@ function handlePostback(sender_psid, received_postback) {
                 "type": "postback",
                 "title": "No!",
                 "payload": "no",
+              }
+            ],
+          }]
+        }
+      }
+    }
+  }
+  else if(payload === 'downloads app')
+  {
+	  response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "Have you already installed the application Socializus on your Mobile? If not don't wait anymore...its available on both platforms. So take a look below ;)",
+            "subtitle": "Tap a button to answer.",
+            "image_url": "https://images.squarespace-cdn.com/content/5d227ba8bff56b0001b7c6f8/1567312055793-5VANB5VNCF64RN1LHFR7/free-ticket-imag.png?content-type=image%2Fpng",
+            "buttons": [
+              {
+                "type":"web_url",
+                "url":"https://www.socializus.com/",
+                "title":"Android"
+              },
+              {
+                "type":"web_url",
+                "url":"https://www.socializus.com/",
+                "title":"Ios"
               }
             ],
           }]
