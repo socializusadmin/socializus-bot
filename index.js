@@ -129,11 +129,11 @@ function handleMessage(sender_psid, received_message) {
 					"type":"web_url",
 					"url":"https://www.socializus.com/",
 					"title":"View Our Website"
-				  },{
+				  },/*{
 					"type":"postback",
 					"title":"Start Chatting",
 					"payload":"chatting"
-				  },{
+				  },*/{
 					"type":"postback",
 					"title":"Free Ticket Plan?",
 					"payload":"free ticket"
