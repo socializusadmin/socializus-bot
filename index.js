@@ -20,7 +20,7 @@
  */
 
 'use strict';
-const PAGE_ACCESS_TOKEN = "EAAOXmdcrZBCUBABN1QkwtsVljnVSsBUauyhAS1hUwMQXQioVPlVVYZCoxnhDpcjopCJQrH5vdLmMrA3jVKsZBKgABhV1h9Xt4H0OyiYU2I71wSa8fuFz00EUIdBtUEEYg561DHhz2Qcw99m9OrJiG2zgsp0iu9Ep9BFKZC583wZDZD";
+const PAGE_ACCESS_TOKEN = "EAAOXmdcrZBCUBALxoonM9aKwPwi4xwNv38kJZA7iOZBQA4tAUV6u47EYPzZBQKH4OEwNC6sxua4UxVsNtcZBUKhSTkJcZBfETLbpt0rNaFZATxSZA6GPQjLHIgBL3rUwDxjZB5mH0cGdCR0o8DygHg4RiYO1arxyheZBxfTUyQfsDzTwZDZD";
 // Imports dependencies and set up http server
 
 // Imports dependencies and set up http server
