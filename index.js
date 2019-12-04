@@ -139,13 +139,9 @@ function handleMessage(sender_psid, received_message) {
 					"payload":"free ticket"
 				  },{
 					"type":"postback",
-					"title":"Downloads Apps Mobile?",
+					"title":"Share/Downloads Apps Mobile?",
 					"payload":"downloads app"
-				  },{
-					"type":"postback",
-					"title":"Share/Invite friends?",
-					"payload":"share to friends"
-				  }       			  
+				  }			  
 				]      
 			  }
 			]
