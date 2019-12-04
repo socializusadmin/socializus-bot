@@ -260,9 +260,7 @@ function handlePostback(sender_psid, received_postback) {
   }
   else if(payload === 'share to friends')
   {
-	/* response = {
-	  "type": "element_share",
-	  "share_contents": { 
+	 response = {
 		"attachment": {
 		  "type": "template",
 		  "payload": {
@@ -288,9 +286,8 @@ function handlePostback(sender_psid, received_postback) {
 		  }
 		}
 	  }
-	}*/
 	
-	response = "attachment":{
+	/*response = "attachment":{
       "type":"template",
       "payload":{
         "template_type":"generic",
@@ -333,7 +330,7 @@ function handlePostback(sender_psid, received_postback) {
           }
         ]
       }
-	}
+	}*/
   }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
