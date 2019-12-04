@@ -141,11 +141,11 @@ function handleMessage(sender_psid, received_message) {
 					"type":"postback",
 					"title":"Downloads Apps Mobile?",
 					"payload":"downloads app"
-				  }/*,{
+				  },{
 					"type":"postback",
 					"title":"Share/Invite friends?",
 					"payload":"share to friends"
-				  } */      			  
+				  }       			  
 				]      
 			  }
 			]
@@ -250,7 +250,12 @@ function handlePostback(sender_psid, received_postback) {
                 "type":"web_url",
                 "url":"https://www.socializus.com/",
                 "title":"Ios"
-              }
+              },
+			  {
+				"type":"postback",
+				"title":"Share/Invite friends?",
+				"payload":"share to friends"
+			  }      
             ],
           }]
         }
