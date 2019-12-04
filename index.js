@@ -118,8 +118,7 @@ function handleMessage(sender_psid, received_message) {
            {
             "title":"Welcome!",
             "image_url":"https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/s960x960/12916799_775383962597533_4700375958288038482_o.jpg?_nc_cat=102&_nc_ohc=vTISMUSqmSAAQns9NN4zaccbLgUys6BTWQcppzZlMJ50BYjOZ9AL3ypyA&_nc_ht=scontent-cdt1-1.xx&oh=13d0b980aa085cf41eac3724a8232ee2&oe=5E75EE10",
-            "subtitle":"Welcome to the Socializus welcoming page.\
-			 You can find some options below to find yours answers.",
+            "subtitle":"Welcome to the Socializus welcoming page. You can find some options below to find yours answers.",
             "default_action": {
               "type": "web_url",
               "url": "https://petersfancybrownhats.com/view?item=103",
@@ -187,18 +186,11 @@ function handlePostback(sender_psid, received_postback) {
 
   // Set the response based on the postback payload
   if (payload === 'yes') {
-    response = { "text": "Ok good choice and trust me it won't be longue..\
-	All you have to do is to post a review on the pubsurfing page on TripAdvisor.\
-	Once your review posted on TripAdvisor make sure to send me back as an attachment\
-	a proof by taking a screenshot of your rewiew posted.\
-	So now i'am waiting for you to send me the screenshot and if its ok after this i will ask you\
-	to send me your email to know where to send the invitation. Good luck i'll back soon ;)" }
+    response = { "text": "Ok good choice and trust me it won't be long..All you have to do is to post a review on the pubsurfing page on TripAdvisor. Once your review posted on TripAdvisor make sure to send me back as an attachment a proof by taking a screenshot of your rewiew posted. So now i'am waiting for you to send me the screenshot and if its ok after this i will ask you to send me your email to know where to send the invitation. Good luck i'll back soon ;)" }
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
   } else if (payload === 'yes2') {
-    response = { "text": "Perfect what a pleasure to collaborate with you. So now let me know your email and\
-	i will send you an invitation to the next pubsurfing. You can also talk to your friend about this opportunity.\
-	Thank you to support us ;)" }
+    response = { "text": "Perfect what a pleasure to collaborate with you. So now let me know your email and i will send you an invitation to the next pubsurfing. You can also talk to your friend about this opportunity. Thank you to support us ;)" }
   } else if (payload === 'no2') {
     response = { "text": "Oops, try sending another image." }
   } else if(payload === 'free ticket')
