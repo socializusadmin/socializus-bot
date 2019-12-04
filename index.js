@@ -265,7 +265,7 @@ function handlePostback(sender_psid, received_postback) {
 			  {
 				"title": "Share and invite your friend below",
 				"subtitle": "",
-				"image_url": "https://www.drupal.org/files/project-images/drupal-addtoany-share-buttons_1.png",
+				"image_url": "http://www.northpointmortgage.com.au/wp-content/uploads/2018/07/share-facebook.png",
 				"buttons": [
 				  {
 					"type": "web_url",
