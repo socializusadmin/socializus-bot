@@ -20,8 +20,10 @@
  */
 
 'use strict';
-const PAGE_ACCESS_TOKEN = "EAAOXmdcrZBCUBAJRkH9vW7FrFIgqNVF4LsQfWotK56WIOQmE7cOkC0q2bGWFzGDGBLnVniZCQkSEL3395DZCSIrckqnrjjZCcETgiJkbKx3xlBjwM4zXouwHrEGi9sYywYrRJDKxgnjKb4Ggc4CSpIUPNb3QQS3b6OLvBSazsQZDZD";
+const PAGE_ACCESS_TOKEN = "EAAOXmdcrZBCUBABN1QkwtsVljnVSsBUauyhAS1hUwMQXQioVPlVVYZCoxnhDpcjopCJQrH5vdLmMrA3jVKsZBKgABhV1h9Xt4H0OyiYU2I71wSa8fuFz00EUIdBtUEEYg561DHhz2Qcw99m9OrJiG2zgsp0iu9Ep9BFKZC583wZDZD";
 // Imports dependencies and set up http server
+
+
 const 
   request = require('request'),
   express = require('express'),
@@ -34,6 +36,8 @@ app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 // Accepts POST requests at /webhook endpoint
 app.post('/webhook', (req, res) => {  
 
+
+  //console.log(req)
   // Parse the request body from the POST
   let body = req.body;
 
