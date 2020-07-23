@@ -16,6 +16,7 @@
  * 2. Run `npm install`
  * 3. Update the VERIFY_TOKEN
  * 4. Add your PAGE_ACCESS_TOKEN to your environment vars
+ * 
  */
 
 'use strict';
