@@ -135,11 +135,13 @@ function handleMessage(sender_psid, received_message) {
 					"type":"web_url",
 					"url":"https://www.socializus.com/",
 					"title":"View Our Website"
-				  },{
+				  },
+				  /*{
 					"type":"postback",
 					"title":"Free Ticket Plan?",
 					"payload":"free ticket"
-				  },{
+				  },*/
+				  {
 					"type":"postback",
 					"title":"Share/Download App?",
 					"payload":"downloads app"
