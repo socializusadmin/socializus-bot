@@ -20,7 +20,9 @@
  */
 
 'use strict';
-const PAGE_ACCESS_TOKEN = "EAAOXmdcrZBCUBALExx5xOr7FCEtrA0ZAXbTS2N6pwHgsSPc5Ue1laKDIfBhAMFnHMRvrOZCkyvp6GL68ONM4i7MkHQTfhWO5dlZCNZCEvDZBZBJgUSUWUrZBQq9UQWknIHamOckbCkme5g0LqRPXf2GfiQ5HJbHxuFkeb0CnuWHSRRmZC3YXT4LpZB";
+//const PAGE_ACCESS_TOKEN = "EAAOXmdcrZBCUBALExx5xOr7FCEtrA0ZAXbTS2N6pwHgsSPc5Ue1laKDIfBhAMFnHMRvrOZCkyvp6GL68ONM4i7MkHQTfhWO5dlZCNZCEvDZBZBJgUSUWUrZBQq9UQWknIHamOckbCkme5g0LqRPXf2GfiQ5HJbHxuFkeb0CnuWHSRRmZC3YXT4LpZB";
+
+const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 
 // test
 // Imports dependencies and set up http server
@@ -78,7 +80,8 @@ app.post('/webhook', (req, res) => {
 app.get('/webhook', (req, res) => {
   
   /** UPDATE YOUR VERIFY TOKEN **/
-  const VERIFY_TOKEN = "pipa-token";
+  //const VERIFY_TOKEN = "pipa-token";
+  const VERIFY_TOKEN = process.env.VERIFICATION_TOKEN;
   
   // Parse params from the webhook verification request
   let mode = req.query['hub.mode'];
