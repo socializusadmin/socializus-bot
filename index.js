@@ -143,7 +143,7 @@ function handleMessage(sender_psid, received_message) {
 				  },*/
 				  {
 					"type":"postback",
-					"title":"Share/Download App?",
+					"title":"Download App?",
 					"payload":"downloads app"
 				  }			  
 				]      
