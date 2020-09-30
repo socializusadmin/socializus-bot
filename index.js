@@ -21,7 +21,6 @@
 
 'use strict';
 //const PAGE_ACCESS_TOKEN = "EAAOXmdcrZBCUBALExx5xOr7FCEtrA0ZAXbTS2N6pwHgsSPc5Ue1laKDIfBhAMFnHMRvrOZCkyvp6GL68ONM4i7MkHQTfhWO5dlZCNZCEvDZBZBJgUSUWUrZBQq9UQWknIHamOckbCkme5g0LqRPXf2GfiQ5HJbHxuFkeb0CnuWHSRRmZC3YXT4LpZB";
-
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 
 // test
@@ -124,8 +123,8 @@ function handleMessage(sender_psid, received_message) {
 			"elements":[
 			   {
 				"title":"Welcome!",
-				"image_url":"https://scontent-cdt1-1.xx.fbcdn.net/v/t31.0-8/s960x960/12916799_775383962597533_4700375958288038482_o.jpg?_nc_cat=102&_nc_ohc=vTISMUSqmSAAQns9NN4zaccbLgUys6BTWQcppzZlMJ50BYjOZ9AL3ypyA&_nc_ht=scontent-cdt1-1.xx&oh=13d0b980aa085cf41eac3724a8232ee2&oe=5E75EE10",
-				"subtitle":"Welcome to the Socializus welcoming page. You can find some options below to find yours answers.",
+				"image_url":"https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/117337381_2117232981745951_8158836202697299870_o.jpg?_nc_cat=106&_nc_sid=09cbfe&_nc_ohc=u3DQ8T-ljPYAX_UiwRc&_nc_ht=scontent-cdt1-1.xx&oh=199dc196e0eb0e7219870f65e2e0808e&oe=5F97EA3F",
+				"subtitle":"Welcome to the Socializus community page. You can find some options below to find yours answers.",
 				"default_action": {
 				  "type": "web_url",
 				  "url": "https://petersfancybrownhats.com/view?item=103",
