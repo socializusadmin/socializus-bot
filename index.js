@@ -243,12 +243,12 @@ function handlePostback(sender_psid, received_postback)
             "buttons": [
               {
                 "type":"web_url",
-                "url":"https://www.socializus.com/",
+                "url":"https://play.google.com/store/apps/details?id=com.social.firebase.example.socializus",
                 "title":"Android"
               },
               {
                 "type":"web_url",
-                "url":"https://www.socializus.com/",
+                "url":"https://apps.apple.com/fr/app/socializus/id1492352535",
                 "title":"Ios"
               },
 			  {
